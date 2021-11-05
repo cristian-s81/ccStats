@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -23,6 +23,15 @@ const app = initializeApp(firebaseConfig);
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'ccstats';
+export class AppComponent implements OnInit{
+
+  title = 'CCStats';
+
+  constructor() {
+  }
+  
+  ngOnInit(): void {
+    //throw new Error('Method not implemented.');
+  }
+  
 }
