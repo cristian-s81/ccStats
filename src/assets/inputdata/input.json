@@ -1,0 +1,17 @@
+{
+    "ccdata" : [
+        {"cc":"binancecoin", "fiat": "usd", "entryList": 
+            [
+            {"qty": 0.222, "price":540,  "date": "2021-04-28 08:29", "staking": 2},
+            {"qty": 0.16587192, "price":509,  "date": "2021-05-17 05:30", "staking": 2 },
+            {"qty": 0.2755, "price":500,  "date": "2021-05-18 16:30", "staking": 2 }
+            ]
+        },
+        {"cc":"vechain", "fiat": "usd", "entryList": 
+            [
+            {"qty": 0.222, "price":540,  "date": "2021-04-28 08:29", "staking": 2}
+            ]
+        }
+    ]
+}
+

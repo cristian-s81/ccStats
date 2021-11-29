@@ -1,0 +1,29 @@
+<p>CCurrency Component</p>
+
+<div id="currency-list">
+    <div *ngFor="let cc of currencyList" >
+        
+        <div class="align-middle my-5" >
+            <h3 class="card-title align-middle main-title">{{cc.name}}</h3>
+        </div>
+
+        <!-- <nb-card>
+            <nb-card-body>
+                <h3 class="card-title align-middle main-title">{{cc.name}}</h3>
+            </nb-card-body>
+          </nb-card> -->
+
+          <!-- <mat-card class="example-card">
+            <mat-card-title-group>
+              <mat-card-title>{{cc.name}}</mat-card-title>
+              <mat-card-subtitle>{{cc.symbol}}</mat-card-subtitle>
+              <img mat-card-sm-image src="{{cc.image}}" >
+            </mat-card-title-group>
+            <mat-card-content>
+              {{cc.current_price}}
+            </mat-card-content>
+          </mat-card> -->
+
+    </div>
+</div>
+

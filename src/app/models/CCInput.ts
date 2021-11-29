@@ -1,13 +1,20 @@
-export interface CCInput {
-    cc: String;
-    fiat: String;
-    entryList: InputEntry[];
+import { Injectable } from '@angular/core';
+
+@Injectable({
+    providedIn: 'root',
+  })
+export class CCInput {
+    ccdata!: CCdata[];
+}
+export class CCdata {
+    cc!: String;
+    fiat!: String;
+    entryList!: InputEntry[];
 }
 
-export interface InputEntry {
-    qty: number; 
-    price: number;
-    date: string;
-    perc: number;
-    staking: number;
+export class InputEntry {
+    qty!: number; 
+    price!: number;
+    date!: string;
+    staking!: number;
 }
