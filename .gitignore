@@ -357,3 +357,7 @@ Thumbs.db
 /.angular/cache/angular-webpack/4e6f4172cb4f3a11b59734d5bb789f5cd026d114/2.pack
 /.angular/cache/angular-webpack/4e6f4172cb4f3a11b59734d5bb789f5cd026d114/index.pack.old
 /.firebase/hosting.ZGlzdFxjY3N0YXRz.cache
+/.angular/cache/*
+/.firebase/*
+/.firebase/*
+/.firebase/hosting.ZGlzdFxjY3N0YXRz.cache
