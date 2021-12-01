@@ -361,3 +361,8 @@ Thumbs.db
 /.firebase/*
 /.firebase/*
 /.firebase/hosting.ZGlzdFxjY3N0YXRz.cache
+/sshkey
+/sshkey.ppk
+/sshkey.ppk.pub
+/sshkey.pub
+/.firebase/*

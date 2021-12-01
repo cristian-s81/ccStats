@@ -5,21 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CcstatsComponent } from './components/ccstats/ccstats.component';
 import { CcurrencyComponent } from './components/ccurrency/ccurrency.component';
+import { CcentryComponent } from './components/ccentry/ccentry.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider';
+import { MaterialModule } from './material.module'; // For Angular Material support
 
 @NgModule({
   declarations: [
     AppComponent,
     CcstatsComponent,
-    CcurrencyComponent
+    CcurrencyComponent,
+    CcentryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MatSliderModule,
     BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

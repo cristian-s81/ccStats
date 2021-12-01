@@ -13,8 +13,9 @@ export class CriptoCurrency {
     market_cap_rank!: number;
     name!: String;
     current_price!: number;
-    price_change_percentage_24h!: String;
+    price_change_percentage_24h!: number;
     entryList!: Entry[];
+    percColor!: String;
 }
 
 

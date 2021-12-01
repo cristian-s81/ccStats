@@ -10,7 +10,8 @@ export class Entry {
     price!: number;
     date!: string;
     perc!: number;
-    actualValue!: number;
+    actualPrice!: number;
     gainLoss!: number;
     ccRef!: CriptoCurrency;
+    staking!: number;
 }
