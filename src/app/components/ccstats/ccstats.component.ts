@@ -8,10 +8,10 @@ import InputData from  'src/assets/inputdata/input.json';
   styleUrls: ['./ccstats.component.css']
 })
 export class CcstatsComponent implements OnInit {
+
+  showEntries : boolean = true;
+
   constructor() { 
-    console.log('Reading local json files');
-    console.log(InputData);
-    // this.ccinput = InputData;
   }
 
   ngOnInit(): void {

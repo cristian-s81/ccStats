@@ -1,1 +1,6 @@
-<p>ccentry works!</p>
+<div fxLayout="row" fxLayoutAlign="center">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_right_alt</mat-icon>{{entry.qty}} <mat-icon aria-hidden="false" aria-label="Example home icon">alternate_email</mat-icon> {{entry.price}} $  (on {{ entry.date | date :'dd/MM/yy'}})
+</div>
+<div fxLayout="row" fxLayoutAlign="center">
+    {{perc}}% {{gainloss}}$
+</div>

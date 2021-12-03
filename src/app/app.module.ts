@@ -7,6 +7,7 @@ import { CcstatsComponent } from './components/ccstats/ccstats.component';
 import { CcurrencyComponent } from './components/ccurrency/ccurrency.component';
 import { CcentryComponent } from './components/ccentry/ccentry.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material.module'; // For Angular Material support
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MaterialModule } from './material.module'; // For Angular Material supp
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

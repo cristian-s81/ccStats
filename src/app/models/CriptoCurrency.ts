@@ -16,6 +16,11 @@ export class CriptoCurrency {
     price_change_percentage_24h!: number;
     entryList!: Entry[];
     percColor!: String;
+    trending!: String;
+    buyPriceAverage!: number;
+    buyPriceAveragePerc!: number;
+    buyPriceAverageGainLoss!: number;
+    totalQty!: number;
 }
 
 

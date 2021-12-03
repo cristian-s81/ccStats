@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Component, Input, OnInit } from '@angular/core';
+import { Adapter } from 'src/app/models/Adapter';
 import { InputEntry } from 'src/app/models/CCInput';
 import { CriptoCurrency } from 'src/app/models/CriptoCurrency';
-import { Entry } from 'src/app/models/Entry';
 import { CurrencyDataService } from 'src/app/services/currency-data.service';
+import { Util } from 'src/app/Util/Util';
 import inputdata from  'src/assets/inputdata/input.json';
 
 @Component({
@@ -12,9 +12,10 @@ import inputdata from  'src/assets/inputdata/input.json';
   styleUrls: ['./ccurrency.component.css'],
   providers: [CurrencyDataService]
 })
+
 export class CcurrencyComponent implements OnInit {
 
-  private loading: boolean = false;
+  @Input() showEntries!: boolean;
   currencyList : Array<CriptoCurrency> = [];
 
   constructor(private service : CurrencyDataService) { }
@@ -27,33 +28,19 @@ export class CcurrencyComponent implements OnInit {
     inputdata.ccdata.forEach(cc => {
       this.service.getCurrencyData(cc.fiat, cc.cc).subscribe((ccList: CriptoCurrency[]) => 
       {
-        ccList[0].entryList = this.prepareEntryList(<InputEntry[]> cc.entryList);
-        ccList[0].percColor= this.preparePercColor(ccList[0].price_change_percentage_24h);
+        ccList[0].entryList = Adapter.prepareEntryList(<InputEntry[]> cc.entryList, ccList[0].current_price);
+        ccList[0].percColor= Util.preparePercColor(ccList[0].price_change_percentage_24h);
+        ccList[0].trending= Util.prepareTrending(ccList[0].price_change_percentage_24h);
+        const avgData : number [] = Util.calculateBuyPriceAverage(<InputEntry[]> cc.entryList);
+        ccList[0].totalQty= avgData[0];
+        ccList[0].buyPriceAverage= avgData[1];
+        ccList[0].buyPriceAveragePerc= Util.calculatePerc(ccList[0].current_price, ccList[0].buyPriceAverage);
+        ccList[0].buyPriceAverageGainLoss= Util.calculateActualGainLoss(ccList[0].totalQty, ccList[0].current_price, ccList[0].buyPriceAverage);
         this.currencyList.push(ccList[0]);
       },
       error => console.log(error.status)
       );
     });
   }
-
-  prepareEntryList( entryList : InputEntry[]) : Entry[] {
-    let entries: Array<Entry> = [];
-    if(entryList)
-      entryList.forEach(e => {
-        let eOut : Entry = new Entry;
-        eOut.price = e.price;
-        eOut.date = e.date;
-        eOut.qty = e.qty;
-        eOut.staking = e.staking;
-        entries.push(eOut);
-      });
-
-    return entries;
-  }
-
-  preparePercColor( perc : number) : String {
-    if(perc < 0)
-      return "red";
-    return "green";
-  }
+  
 }

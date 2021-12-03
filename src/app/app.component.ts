@@ -25,7 +25,7 @@ const app = initializeApp(firebaseConfig);
 })
 export class AppComponent implements OnInit{
 
-  title = 'ChristoCurrencyStats';
+  title = 'Christo Currency Stats';
 
   constructor() {
   }
