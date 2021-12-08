@@ -1,29 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
 
-
-html, body { margin: 0%; height: 100%; }
-body { margin: 0%; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.mat-success {
-    background-color: rgb(255, 0, 0);
-    color: rgb(0, 0, 0);
+:root {
+    --myGreen: rgb(3, 218, 3);
 }
+
+html, body {
+    margin: 0%;
+    height: 100%;
+}
+
+body {
+    margin: 0%;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+/* .mat-success {
+    background-color: red;
+    color: rgb(0, 0, 0);
+} */
 
 .mat-red {
-    background-color: rgb(255, 0, 0);
+    background-color: red;
     color: rgb(0, 0, 0);
 }
+
 .mat-green {
-    background-color: rgb(81, 255, 0);
+    background-color: var(--myGreen);
     color: rgb(0, 0, 0);
 }
 
 .mat-icon {
-    font-size: 16px;
     vertical-align: middle;
-  }
+}
 
-  .icon-text {
+.material-icons.md-green, .span-green {
+    color: var(--myGreen);
+    margin-left: 5px;
+}
+
+.material-icons.md-red, .span-red {
+    color: red;
+    margin-left: 5px;
+}
+
+.material-icons.md-yellow, .span-yellow {
+    color: yellow;
+    margin-left: 5px;
+}
+
+.icon-text {
     display: flex;
     align-items: center;
+}
+
+/* test flex*/
+.flex-container {
+    /* We first create a flex layout context */
+    display: flex;
+
+    /* flex: 1 1 0px; */
+    /* Then we define the flow direction 
+       and if we allow the items to wrap 
+     * Remember this is the same as:
+     * flex-direction: row;
+     * flex-wrap: wrap;
+     */
+    flex-flow: row wrap;
+
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around left;
+
+    padding: 10;
+    margin: 10;
+    list-style: none;
+}
+
+.flex-item {
+    /* flex-grow: 5;
+    flex-shrink: 10;
+    flex-basis: 10; */
+    /* flex-basis: 100%;
+     */
+    /* width: 0;
+     */
+    flex: 1 1 0;
+    min-width: 40%;
+    /* max-width: 40%; */
+    /* text-align: center; */
+    padding: 10;
+    margin: 10;
 }

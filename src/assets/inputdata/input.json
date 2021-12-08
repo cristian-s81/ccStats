@@ -1,22 +1,42 @@
 {
     "ccdata" : [
+        {"cc":"bitcoin", "fiat": "usd", "entryList": [
+            {"qty": 0.00374660, "price":62540.02,  "date": "2021-11-22 08:20", "staking": 1 }
+        ]},  
         {"cc":"binancecoin", "fiat": "usd", "entryList": 
             [
             {"qty": 0.2221, "price":540,  "date": "2021-04-28 08:29", "staking": 2},
             {"qty": 0.1659, "price":509,  "date": "2021-05-17 05:30", "staking": 2 },
             {"qty": 0.2755, "price":500,  "date": "2021-05-18 16:30", "staking": 2 }
         ]},
-        {"cc":"elrond-erd-2", "fiat": "usd", "entryList": [
-            {"qty": 0.24, "price":412.07,  "date": "2021-11-26 16:24", "staking": 0 },
-            {"qty": 0.09, "price":386.84,  "date": "2021-11-30 16:24", "staking": 0 }
-        ]},
-        {"cc":"bitcoin", "fiat": "usd", "entryList": [
-            {"qty": 0.00374660, "price":62540.02,  "date": "2021-11-22 08:20", "staking": 1 }
-        ]},  
         {"cc":"terra-luna", "fiat": "usd", "entryList": 
             [{"qty": 1.78, "price":39.64,  "date": "2021-10-11 14:32", "staking": 2 },
             {"qty": 1.07, "price":35.84,  "date": "2021-10-18 14:46", "staking": 2 }
-        ]}
+        ]},
+        {"cc":"vechain", "fiat": "usd", "entryList": [
+            {"qty": 458.131, "price":0.19678,  "date": "2021-04-28 09:55", "staking": 1 },
+            {"qty": 867.9, "price":0.115,  "date": "2021-11-26 09:55", "staking": 1 }
+        ]},
+        {"cc":"elrond-erd-2", "fiat": "usd", "entryList": [
+            {"qty": 0.24, "price":412.07,  "date": "2021-11-26 16:24", "staking": 1 },
+            {"qty": 0.09, "price":386.84,  "date": "2021-11-30 16:24", "staking": 1 },
+            {"qty": 0.05, "price":374.62,  "date": "2021-12-02 16:24", "staking": 1 },
+            {"qty": 0.1873, "price":289.34,  "date": "2021-12-04 10:00", "staking": 1 }
+        ]},
+        {"cc":"alpha-finance", "fiat": "usd", "entryList": [
+            {"qty": 45, "price":1.218,  "date": "2021-11-04 15:00", "staking": 0 },
+            {"qty": 56, "price":1.000,  "date": "2021-12-03 15:00", "staking": 0 }
+        ]}, 
+        {"cc":"ocean-protocol", "fiat": "usd", "entryList": [{"qty": 69.45119, "price":1.294,  "date": "2021-04-28 08:20", "staking": 0 }]}, 
+        {"cc":"polkadot", "fiat": "usd", "entryList": [{"qty": 2, "price":25.571,  "date": "2021-05-19 16:24", "staking": 1 }]}, 
+        {"cc":"solana", "fiat": "usd", "entryList": [{"qty": 0.45, "price":148.32,  "date": "2021-10-11 14:30", "staking": 2 }]}, 
+        {"cc":"chainlink", "fiat": "usd", "entryList": [{"qty": 2, "price":32.32,  "date": "2021-10-11 14:30", "staking": 1 }]}, 
+        {"cc":"mines-of-dalarnia", "fiat": "usd", "entryList": [{"qty": 8, "price":3.85311,  "date": "2021-10-11 14:30", "staking": 1 }]}, 
+        {"cc":"decentraland", "fiat": "usd", "entryList": [{"qty": 23, "price":4.5759,  "date": "2021-12-01 08:20", "staking": 1 }]}, 
+        {"cc":"the-sandbox", "fiat": "usd", "entryList": [
+            {"qty": 30, "price":6.55,  "date": "2021-11-27 08:20", "staking": 1 },
+            {"qty": 10.834, "price":5.06,  "date": "2021-12-06 09:20", "staking": 1 }
+        ]} 
     ]
 }
 
