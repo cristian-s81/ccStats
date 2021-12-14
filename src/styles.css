@@ -18,10 +18,9 @@ body {
     flex: 1 1 auto;
 }
 
-/* .mat-success {
-    background-color: red;
-    color: rgb(0, 0, 0);
-} */
+.mat-list-item {
+    margin-left: -30px;
+}
 
 .mat-red {
     background-color: red;
@@ -40,16 +39,19 @@ body {
 .material-icons.md-green, .span-green {
     color: var(--myGreen);
     margin-left: 5px;
+    margin-right: 5px;
 }
 
 .material-icons.md-red, .span-red {
     color: red;
     margin-left: 5px;
+    margin-right: 5px;
 }
 
 .material-icons.md-yellow, .span-yellow {
     color: yellow;
     margin-left: 5px;
+    margin-right: 5px;
 }
 
 .icon-text {

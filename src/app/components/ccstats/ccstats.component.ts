@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CCInput } from 'src/app/models/CCInput';
-import InputData from  'src/assets/inputdata/input.json';
+import InputData from 'src/assets/inputdata/input.json';
 
 @Component({
   selector: 'ccstats',
@@ -9,15 +9,16 @@ import InputData from  'src/assets/inputdata/input.json';
 })
 export class CcstatsComponent implements OnInit {
 
-  showEntries : boolean = true;
+  showEntries: boolean = true;
+  showTotals: boolean = true;
 
-  constructor() { 
+  constructor() {
   }
 
   ngOnInit(): void {
   }
 
   prepareCCInput() {
-    
+
   }
 }

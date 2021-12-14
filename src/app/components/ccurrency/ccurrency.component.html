@@ -1,3 +1,9 @@
+<div *ngIf="showTotals">
+  <!-- [currencyList]="currencyList" -->
+  <totals [totalGainLoss]="totalGainLoss"></totals>
+</div>
+
+
 <!-- fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px" -->
 <div class="flex-container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around" fxLayoutGap="50px">
   <div *ngFor="let cc of currencyList" class="flex-item">
@@ -25,15 +31,6 @@
             </span>
 
           </div>
-
-          <!-- <div>
-            <button mat-button>qty: {{cc.totalQty}}</button>
-            <button mat-button>avg: {{cc.buyPriceAverage}}$</button>
-          </div> -->
-          <!-- <div>
-            <button mat-button>{{cc.buyPriceAveragePerc}}%</button>
-            <button mat-button>{{cc.buyPriceAverageGainLoss}}$</button>
-          </div> -->
         </mat-card-subtitle>
       </mat-card-title-group>
       <!-- <mat-card-actions>

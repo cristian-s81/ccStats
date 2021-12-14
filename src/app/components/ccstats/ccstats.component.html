@@ -10,14 +10,16 @@
     </a>
     <span class="example-spacer"></span>
     <div fxShow="true" fxHide.lt-md="true">
-      <mat-slide-toggle (change)="this.showEntries = !this.showEntries">show entries</mat-slide-toggle>
-      <!-- <a mat-button routerLink="/">refresh</a> -->
+      <mat-slide-toggle (change)="this.showTotals = !this.showTotals">totals</mat-slide-toggle>
+      <mat-slide-toggle (change)="this.showEntries = !this.showEntries">entries</mat-slide-toggle>
+      <!-- <a href="static-pages/staticCCStats.html">ccstatic</a> -->
     </div>
   </mat-toolbar>
   <mat-sidenav-container fxFlexFill class="example-container">
     <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
       <div fxLayout="column">
-        <mat-slide-toggle (change)="this.showEntries = !this.showEntries">show entries</mat-slide-toggle>
+        <mat-slide-toggle (change)="this.showTotals = !this.showTotals">totals</mat-slide-toggle>
+        <mat-slide-toggle (change)="this.showEntries = !this.showEntries">entries</mat-slide-toggle>
         <!-- <a mat-button routerLink="/prices">Prices</a> 
               <a mat-button routerLink="/start-page">Start page</a>
               <a mat-button routerLink="/offer">Offer</a>
@@ -25,7 +27,7 @@
       </div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
-      <ccurrency [showEntries]="showEntries"></ccurrency>
+      <ccurrency [showEntries]="showEntries" [showTotals]="showTotals"></ccurrency>
     </mat-sidenav-content>
   </mat-sidenav-container>
   <span class="example-spacer"></span>
