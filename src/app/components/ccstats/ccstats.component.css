@@ -27,10 +27,6 @@ button {
   min-width: min-content;
 }
 
-.example-spacer {
-  flex: 1 1 auto;
-}
-
 .mat-sidenav-content {
   font-size: 100%;
   text-align: left;

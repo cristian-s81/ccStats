@@ -8,7 +8,7 @@
     <a mat-button class="siteName" routerLink="/">
       <span>Christo Currency Stats </span>
     </a>
-    <span class="example-spacer"></span>
+    <span class="spacer-big"></span>
     <div fxShow="true" fxHide.lt-md="true">
       <mat-slide-toggle (change)="this.showTotals = !this.showTotals">totals</mat-slide-toggle>
       <mat-slide-toggle (change)="this.showEntries = !this.showEntries">entries</mat-slide-toggle>
@@ -30,16 +30,9 @@
       <ccurrency [showEntries]="showEntries" [showTotals]="showTotals"></ccurrency>
     </mat-sidenav-content>
   </mat-sidenav-container>
-  <span class="example-spacer"></span>
+  <span class="spacer-big"></span>
   <mat-toolbar>
-    <div fxShow="true" fxHide.gt-sm="true">
-      <button mat-icon-button (click)="sidenav.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </div>
-    <a mat-button class="siteName" routerLink="/">
-    </a>
-    <span class="example-spacer"></span>
+    <span class="spacer-big"></span>
     <div fxShow="true" fxHide.lt-md="true">
       <mat-slide-toggle (change)="this.showEntries = !this.showEntries">show entries</mat-slide-toggle>
       <!-- <a mat-button routerLink="/">refresh</a> -->

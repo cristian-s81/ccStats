@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { CriptoCurrency } from 'src/app/models/CriptoCurrency';
+import { BalanceData } from 'src/app/models/BalanceData';
+import { CryptoCurrency } from 'src/app/models/CryptoCurrency';
 import { CurrencyDataService } from 'src/app/services/currency-data.service';
 import { UserDataService } from 'src/app/services/user-data.service';
 
@@ -12,36 +12,19 @@ import { UserDataService } from 'src/app/services/user-data.service';
 export class TotalsComponent implements OnInit {
 
   usdtEuro: number = 0;
-  @Input() totalGainLoss: number = 0;
-
-  // @Input() currencyList: Array<CriptoCurrency> = [];
-  // @Input() currencyList: Array<CriptoCurrency> = [];
-
-  // currencyList$!: Observable<Array<CriptoCurrency>>;
+  @Input() balance: BalanceData = new BalanceData();
 
   constructor(private currencyService: CurrencyDataService, private userDataservice: UserDataService) { }
 
   ngOnInit(): void {
-    this.currencyService.getCurrencyData(this.userDataservice.getUserFiat(), 'tether').subscribe((ccList: CriptoCurrency[]) => {
+    this.currencyService.getCurrencyData(this.userDataservice.getUserFiat(), 'tether').subscribe((ccList: CryptoCurrency[]) => {
       this.usdtEuro = ccList[0].current_price;
+      console.log(this.usdtEuro);
+      this.balance.starting = Math.round(1 / this.usdtEuro * this.userDataservice.getStartingCapital());
     },
       error => console.log(error.status)
     );
 
-    // this.currencyList$ = of(this.currencyList);
-    // this.totalGainLoss = this.calculateTotalValue(this.currencyList);
-    // console.log(this.currencyList);
-  }
-
-  // calculateTotalValue(currencyList: Observable<Array<CriptoCurrency>>): number {
-  calculateTotalValue(currencyList: Array<CriptoCurrency>): number {
-    let total: number = 0;
-    currencyList.forEach(c => {
-      c.entryList.forEach(e => {
-        total = total + e.gainLoss;
-      })
-    });
-    return total;
   }
 
 }

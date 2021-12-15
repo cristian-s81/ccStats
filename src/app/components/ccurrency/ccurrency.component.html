@@ -1,18 +1,19 @@
 <div *ngIf="showTotals">
   <!-- [currencyList]="currencyList" -->
-  <totals [totalGainLoss]="totalGainLoss"></totals>
+  <totals [balance]="ccModel.balance"></totals>
 </div>
 
 
 <!-- fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px" -->
 <div class="flex-container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around" fxLayoutGap="50px">
-  <div *ngFor="let cc of currencyList" class="flex-item">
+  <div *ngFor="let cc of ccModel.cryptos" class="flex-item">
     <!--  -->
     <mat-card class="example-card" id="{{cc.name}}" fxFlex="calc(80%-25px)" fxFlex.sm="calc(80%-25px)">
       <mat-card-title-group>
         <img mat-card-sm-image src="{{cc.image}}">
-        <mat-card-title>{{cc.name}}
-          <button mat-button color="{{cc.percColor}}">{{cc.price_change_percentage_24h}} %</button>
+        <mat-card-title><span>{{cc.name}}</span>
+          <span class="spacer-big"></span>
+          <span> <button mat-button color="{{cc.percColor}}">{{cc.price_change_percentage_24h}} %</button></span>
         </mat-card-title>
         <mat-card-subtitle>
           <div>
@@ -22,10 +23,10 @@
           <div>
             <span>
               {{cc.totalQty}} <mat-icon>alternate_email</mat-icon>
-              avg: {{cc.buyPriceAverage}}$
+              avg: {{cc.buyPriceAverage}}$ total value: {{cc.actualValue}}$
             </span>
-            <span class="span-{{cc.buyPriceAveragePerc>0 ? 'green' : 'red'}}">
-              <mat-icon class="md-{{cc.buyPriceAveragePerc>0 ? 'green' : 'red'}}">
+            <span class="span-{{cc.buyPriceAveragePerc > 0 ? 'green' : 'red'}}">
+              <mat-icon class="md-{{cc.buyPriceAveragePerc > 0 ? 'green' : 'red'}}">
                 {{getTrending(cc.buyPriceAveragePerc)}}</mat-icon>
               {{cc.buyPriceAveragePerc}}% {{cc.buyPriceAverageGainLoss}}$
             </span>
@@ -47,8 +48,3 @@
   </div>
 
 </div>
-<!-- <mat-icon>euro_symbol</mat-icon> 
-<mat-icon>update</mat-icon> refresh
-<mat-icon>loop</mat-icon> refresh 2
-
--->

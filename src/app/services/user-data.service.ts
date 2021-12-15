@@ -16,4 +16,8 @@ export class UserDataService {
   getUserFiat(): String {
     return inputdata.currency;
   }
+
+  getStartingCapital(): number {
+    return inputdata.starting;
+  }
 }

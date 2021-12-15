@@ -14,8 +14,12 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.example-spacer {
+.spacer-big {
     flex: 1 1 auto;
+}
+
+.spacer-small {
+    flex: 0.1 1 auto;
 }
 
 .mat-list-item {

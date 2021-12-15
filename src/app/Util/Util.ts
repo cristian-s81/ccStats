@@ -9,8 +9,8 @@ export class Util {
 
     if (entryList)
       entryList.forEach(e => {
-        qty += e.qty;
-        amount += e.price * e.qty;
+        qty = qty + e.qty;
+        amount = amount + e.price * e.qty;
       });
     res[0] = Math.round(qty * 10000 + Number.EPSILON) / 10000
     res[1] = Math.round(amount / qty * 10000 + Number.EPSILON) / 10000

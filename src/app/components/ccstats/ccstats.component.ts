@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CCInput } from 'src/app/models/CCInput';
-import InputData from 'src/assets/inputdata/input.json';
 
 @Component({
   selector: 'ccstats',
