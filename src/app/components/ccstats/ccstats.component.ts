@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CcstatsComponent implements OnInit {
 
-  showEntries: boolean = true;
+  showEntries: boolean = false;
   showTotals: boolean = true;
 
   constructor() {

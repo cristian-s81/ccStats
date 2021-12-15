@@ -5,12 +5,16 @@
         <mat-icon>menu</mat-icon>
       </button>
     </div>
-    <a mat-button class="siteName" routerLink="/">
+    <a mat-button class="siteName" routerLink="/" fxShow="true" fxHide.lt-md="true">
       <span>Christo Currency Stats </span>
+    </a>
+    <a mat-button class="siteName" routerLink="/" fxShow="true" fxHide.gt-sm="true">
+      <span>C C Stats </span>
     </a>
     <span class="spacer-big"></span>
     <div fxShow="true" fxHide.lt-md="true">
-      <mat-slide-toggle (change)="this.showTotals = !this.showTotals">totals</mat-slide-toggle>
+      <mat-slide-toggle (change)="this.showTotals = !this.showTotals">balance</mat-slide-toggle>
+      <span class="spacer-small"></span>
       <mat-slide-toggle (change)="this.showEntries = !this.showEntries">entries</mat-slide-toggle>
       <!-- <a href="static-pages/staticCCStats.html">ccstatic</a> -->
     </div>
@@ -19,23 +23,19 @@
     <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
       <div fxLayout="column">
         <mat-slide-toggle (change)="this.showTotals = !this.showTotals">totals</mat-slide-toggle>
+        <mat-divider></mat-divider>
         <mat-slide-toggle (change)="this.showEntries = !this.showEntries">entries</mat-slide-toggle>
-        <!-- <a mat-button routerLink="/prices">Prices</a> 
-              <a mat-button routerLink="/start-page">Start page</a>
-              <a mat-button routerLink="/offer">Offer</a>
-              <a mat-button routerLink="/contact">Contact</a> -->
       </div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
       <ccurrency [showEntries]="showEntries" [showTotals]="showTotals"></ccurrency>
     </mat-sidenav-content>
   </mat-sidenav-container>
-  <span class="spacer-big"></span>
+  <!-- footer -->
   <mat-toolbar>
     <span class="spacer-big"></span>
     <div fxShow="true" fxHide.lt-md="true">
       <mat-slide-toggle (change)="this.showEntries = !this.showEntries">show entries</mat-slide-toggle>
-      <!-- <a mat-button routerLink="/">refresh</a> -->
     </div>
   </mat-toolbar>
 </div>
