@@ -39,24 +39,6 @@
             ]
         },
         {
-            "cc": "terra-luna",
-            "fiat": "usd",
-            "entryList": [
-                {
-                    "qty": 1.78,
-                    "price": 39.64,
-                    "date": "2021-10-11 14:32",
-                    "staking": 2
-                },
-                {
-                    "qty": 1.07,
-                    "price": 35.84,
-                    "date": "2021-10-18 14:46",
-                    "staking": 2
-                }
-            ]
-        },
-        {
             "cc": "vechain",
             "fiat": "usd",
             "entryList": [
@@ -101,6 +83,12 @@
                     "price": 289.34,
                     "date": "2021-12-04 10:00",
                     "staking": 1
+                },
+                {
+                    "qty": 0.21,
+                    "price": 231.79,
+                    "date": "2021-12-20 10:00",
+                    "staking": 1
                 }
             ]
         },
@@ -112,13 +100,13 @@
                     "qty": 45,
                     "price": 1.218,
                     "date": "2021-11-04 15:00",
-                    "staking": 0
+                    "staking": 2
                 },
                 {
                     "qty": 56,
                     "price": 1.000,
                     "date": "2021-12-03 15:00",
-                    "staking": 0
+                    "staking": 2
                 }
             ]
         },
@@ -154,6 +142,12 @@
                     "qty": 0.45,
                     "price": 148.32,
                     "date": "2021-10-11 14:30",
+                    "staking": 2
+                },
+                {
+                    "qty": 0.27,
+                    "price": 179.50,
+                    "date": "2021-12-21 08:30",
                     "staking": 2
                 }
             ]
@@ -209,6 +203,18 @@
                     "price": 5.06,
                     "date": "2021-12-06 09:20",
                     "staking": 1
+                }
+            ]
+        },
+        {
+            "cc": "terra-luna",
+            "fiat": "usd",
+            "entryList": [
+                {
+                    "qty": 0.94,
+                    "price": 86.75,
+                    "date": "2021-12-21 19:32",
+                    "staking": 0
                 }
             ]
         }

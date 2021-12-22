@@ -11,6 +11,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material.module'; // For Angular Material support
 
+import { environment } from 'src/environments/environment';
+import { initializeApp } from 'firebase/app';
+
+const app = initializeApp(environment.firebaseConfig);
+
 @NgModule({
   declarations: [
     AppComponent,

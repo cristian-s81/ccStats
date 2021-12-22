@@ -1,0 +1,54 @@
+{
+    "starting": 1200,
+    "currency": "EUR",
+    "ccdata": [
+        {
+            "cc": "terra-luna",
+            "fiat": "usd",
+            "entryList": [
+                {
+                    "qty": 1.78,
+                    "price": 39.64,
+                    "date": "2021-10-11 14:32",
+                    "staking": 2
+                },
+                {
+                    "qty": 1.07,
+                    "price": 35.84,
+                    "date": "2021-10-18 14:46",
+                    "staking": 2
+                }
+            ]
+        },
+        {
+            "cc": "elrond-erd-2",
+            "fiat": "usd",
+            "entryList": [
+                {
+                    "qty": 0.24,
+                    "price": 412.07,
+                    "date": "2021-11-26 16:24",
+                    "staking": 1
+                },
+                {
+                    "qty": 0.09,
+                    "price": 386.84,
+                    "date": "2021-11-30 16:24",
+                    "staking": 1
+                },
+                {
+                    "qty": 0.05,
+                    "price": 374.62,
+                    "date": "2021-12-02 16:24",
+                    "staking": 1
+                },
+                {
+                    "qty": 0.1873,
+                    "price": 289.34,
+                    "date": "2021-12-04 10:00",
+                    "staking": 1
+                }
+            ]
+        }
+    ]
+}

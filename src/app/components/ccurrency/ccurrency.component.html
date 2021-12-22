@@ -1,8 +1,6 @@
-<div *ngIf="showTotals">
-  <!-- [currencyList]="currencyList" -->
+<div *ngIf="shs.showTotals">
   <totals [balance]="ccModel.balance"></totals>
 </div>
-
 
 <!-- fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px" -->
 <div class="flex-container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around" fxLayoutGap="50px">
@@ -11,17 +9,22 @@
     <mat-card class="example-card" id="{{cc.name}}" fxFlex="calc(80%-25px)" fxFlex.sm="calc(80%-25px)">
       <mat-card-title-group>
         <img mat-card-sm-image src="{{cc.image}}">
-        <mat-card-title><span>{{cc.name}}</span>
+        <mat-card-title><span
+            matTooltip="{{cc.ath + '$ ' + cc.ath_change_percentage + '% on: '}}{{cc.ath_date | date :'dd/MM/yy'}}">{{cc.name}}</span>
           <span class="spacer-big"></span>
-          <span> <button mat-button color="{{cc.percColor}}">{{cc.price_change_percentage_24h}} %</button></span>
+          <span>({{cc.symbol}} - n.{{cc.market_cap_rank}})</span>
+          <span> <button mat-button
+              color="{{cc.price_change_percentage_24h> 0 ? 'green' : 'red'}}">{{cc.price_change_percentage_24h}}
+              %</button></span>
         </mat-card-title>
         <mat-card-subtitle>
+          <div *ngIf="shs.showATH">ATH: {{cc.ath + '$ ' + cc.ath_change_percentage + '% on: '}}{{cc.ath_date | date
+            :'dd/MM/yy'}}</div>
           <div>
-            <span>({{cc.symbol}} - n.{{cc.market_cap_rank}})</span>
-            <span>price: {{cc.current_price}}$</span>
+            <span>current price: {{cc.current_price}}$</span>
           </div>
           <div>
-            <span>
+            <span>asset:
               {{cc.totalQty}} <mat-icon>alternate_email</mat-icon>
               avg: {{cc.buyPriceAverage}}$ total value: {{cc.actualValue}}$
             </span>
@@ -36,7 +39,7 @@
       </mat-card-title-group>
       <!-- <mat-card-actions>
         </mat-card-actions> -->
-      <mat-card-content *ngIf="showEntries">
+      <mat-card-content *ngIf="shs.showEntries">
         <mat-list *ngFor="let entry of cc.entryList; last as isLast;">
           <mat-list-item>
             <ccentry [entry]="entry"> </ccentry>

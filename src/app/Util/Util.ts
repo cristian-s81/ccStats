@@ -33,16 +33,8 @@ export class Util {
     return (Math.round((actualPrice * 100 / buyPrice) - 100));
   }
 
-  // static calculateActualValue(qty : number, actualPrice : number) {
-  //     let val = Math.round(qty * actualPrice);
-  //     totalValueUSD += val; 
-  //     return  val + '$ (' + convertToEuro(val)+'€)';
-  // }
-
   static calculateActualGainLoss(qty: number, actualPrice: number, buyPrice: number): number {
     let val = (Math.round(qty * actualPrice) - Math.round(qty * buyPrice));
-    // totalGainUSDT = totalGainUSDT+val;
-    // return val + '$ (' + convertToEuro(val)+'€)';
     return val;
   }
 

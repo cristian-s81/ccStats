@@ -7,6 +7,7 @@ import { BalanceData } from './BalanceData';
 })
 
 export class CCModel {
+    user!: String;
     cryptos!: CryptoCurrency[];
     balance!: BalanceData;
 }

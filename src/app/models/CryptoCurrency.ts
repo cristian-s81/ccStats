@@ -15,13 +15,16 @@ export class CryptoCurrency {
   current_price!: number;
   price_change_percentage_24h!: number;
   entryList!: Entry[];
-  percColor!: String;
   trending!: String;
   buyPriceAverage!: number;
   buyPriceAveragePerc!: number;
   buyPriceAverageGainLoss!: number;
   totalQty!: number;
   actualValue!: number;
-}
 
+  // ATH Data
+  ath!: number;
+  ath_change_percentage!: number;
+  ath_date!: string;
+}
 

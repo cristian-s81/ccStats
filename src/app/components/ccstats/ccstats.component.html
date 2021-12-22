@@ -13,29 +13,33 @@
     </a>
     <span class="spacer-big"></span>
     <div fxShow="true" fxHide.lt-md="true">
-      <mat-slide-toggle (change)="this.showTotals = !this.showTotals">balance</mat-slide-toggle>
+      <mat-slide-toggle (change)="this.shs.showTotals = !this.shs.showTotals">balance</mat-slide-toggle>
       <span class="spacer-small"></span>
-      <mat-slide-toggle (change)="this.showEntries = !this.showEntries">entries</mat-slide-toggle>
+      <mat-slide-toggle (change)="this.shs.showEntries = !this.shs.showEntries">entries</mat-slide-toggle>
+      <span class="spacer-small"></span>
+      <mat-slide-toggle (change)="this.shs.showATH = !this.shs.showATH">ath</mat-slide-toggle>
       <!-- <a href="static-pages/staticCCStats.html">ccstatic</a> -->
     </div>
   </mat-toolbar>
   <mat-sidenav-container fxFlexFill class="example-container">
     <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
       <div fxLayout="column">
-        <mat-slide-toggle (change)="this.showTotals = !this.showTotals">totals</mat-slide-toggle>
+        <mat-slide-toggle (change)="this.shs.showTotals = !this.shs.showTotals">totals</mat-slide-toggle>
         <mat-divider></mat-divider>
-        <mat-slide-toggle (change)="this.showEntries = !this.showEntries">entries</mat-slide-toggle>
+        <mat-slide-toggle (change)="this.shs.showEntries = !this.shs.showEntries">entries</mat-slide-toggle>
+        <mat-divider></mat-divider>
+        <mat-slide-toggle (change)="this.shs.showATH = !this.shs.showATH">ath</mat-slide-toggle>
       </div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
-      <ccurrency [showEntries]="showEntries" [showTotals]="showTotals"></ccurrency>
+      <ccurrency [user]="user" [shs]="shs"></ccurrency>
     </mat-sidenav-content>
   </mat-sidenav-container>
   <!-- footer -->
   <mat-toolbar>
     <span class="spacer-big"></span>
     <div fxShow="true" fxHide.lt-md="true">
-      <mat-slide-toggle (change)="this.showEntries = !this.showEntries">show entries</mat-slide-toggle>
+      <mat-slide-toggle (change)="this.shs.showEntries = !this.shs.showEntries">show entries</mat-slide-toggle>
     </div>
   </mat-toolbar>
 </div>

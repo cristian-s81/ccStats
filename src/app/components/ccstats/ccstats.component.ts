@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ShowHideSection } from 'src/app/models/ShowHideSection';
 
 @Component({
   selector: 'ccstats',
@@ -7,16 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CcstatsComponent implements OnInit {
 
-  showEntries: boolean = false;
-  showTotals: boolean = true;
+  shs: ShowHideSection = new ShowHideSection();
 
-  constructor() {
+  user: String = "default";
+
+  constructor(private activatedRoute: ActivatedRoute) {
+    let user = this.activatedRoute.snapshot.paramMap.get("user");
+    if (user)
+      this.user = user;
   }
 
   ngOnInit(): void {
   }
 
-  prepareCCInput() {
-
-  }
 }
