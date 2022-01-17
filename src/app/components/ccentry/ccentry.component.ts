@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Entry } from 'src/app/models/Entry';
+import { ShowHideSection } from 'src/app/models/ShowHideSection';
 import { Util } from 'src/app/Util/Util';
 
 @Component({
@@ -9,6 +10,7 @@ import { Util } from 'src/app/Util/Util';
 })
 export class CcentryComponent implements OnInit {
   @Input() entry: Entry = new Entry;
+  shs: ShowHideSection = new ShowHideSection();
 
   perc!: number;
   gainloss!: number;
@@ -40,5 +42,8 @@ export class CcentryComponent implements OnInit {
     }
   }
 
+  calculateEntryVal(qty: number, price: number): number {
+    return Math.round(price * qty * 100) / 100;
+  }
 
 }

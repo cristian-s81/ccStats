@@ -5,8 +5,9 @@ import { Injectable } from '@angular/core';
 })
 
 export class ShowHideSection {
-    showEntries: boolean = false;
+    showEntries: boolean = true;
     showTotals: boolean = true;
-    showATH: boolean = true;
+    showATH: boolean = false;
+    showEntryDate: boolean = false;
 
 }

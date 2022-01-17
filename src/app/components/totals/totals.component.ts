@@ -26,7 +26,7 @@ export class TotalsComponent implements OnInit {
       this.usdtEuro = ccList[0].current_price;
       this.actualValue = this.balance.actualValue;
       this.gainLoss = this.balance.gainLoss;
-      this.balance.starting = Math.round(1 / this.usdtEuro * this.userDataservice.getStartingCapital());
+      this.balance.starting_balance = Math.round(1 / this.usdtEuro * this.userDataservice.getStartingCapital());
     },
       error => console.log(error.status)
     );
@@ -34,9 +34,6 @@ export class TotalsComponent implements OnInit {
   }
 
   convertFiatCurrency() {
-    console.log(this.isEuro);
-    console.log(this.usdtEuro);
-    console.log(this.balance.actualValue);
     if (this.isEuro) {
       this.actualValue = Util.convertToEuro(this.balance.actualValue, this.usdtEuro);
       this.gainLoss = Util.convertToEuro(this.balance.gainLoss, this.usdtEuro);

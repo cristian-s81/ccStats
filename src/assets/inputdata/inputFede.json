@@ -1,5 +1,5 @@
 {
-    "starting": 1200,
+    "starting_balance": 1200,
     "currency": "EUR",
     "ccdata": [
         {

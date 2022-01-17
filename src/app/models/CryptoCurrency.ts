@@ -26,5 +26,10 @@ export class CryptoCurrency {
   ath!: number;
   ath_change_percentage!: number;
   ath_date!: string;
+
+  // ATH Data 24
+  high_24h!: number;
+  low_24h!: number;
+  market_cap_change_percentage_24h!: number;
 }
 

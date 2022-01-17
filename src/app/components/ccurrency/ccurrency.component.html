@@ -20,6 +20,7 @@
         <mat-card-subtitle>
           <div *ngIf="shs.showATH">ATH: {{cc.ath + '$ ' + cc.ath_change_percentage + '% on: '}}{{cc.ath_date | date
             :'dd/MM/yy'}}</div>
+          <div>ATH 24 H: {{cc.high_24h }} $ L: {{ cc.low_24h }}$ MCap: {{cc.market_cap_change_percentage_24h}}%</div>
           <div>
             <span>current price: {{cc.current_price}}$</span>
           </div>

@@ -4,7 +4,8 @@
     </span>
     <span>
         {{entry.qty}} <mat-icon>alternate_email</mat-icon>
-        {{entry.price}}$ (on {{ entry.date | date :'dd/MM/yy'}})
+        {{entry.price}}$ (<span *ngIf="this.shs.showEntryDate">on {{ entry.date | date :'dd/MM/yy'}}</span>
+        {{calculateEntryVal(entry.qty, entry.price)}}$)
     </span>
     <span class="span-{{perc>0 ? 'green' : 'red'}}">
         <mat-icon class="md-{{perc>0 ? 'green' : 'red'}}">{{getTrending(perc)}}</mat-icon> {{perc}}% {{gainloss}}$

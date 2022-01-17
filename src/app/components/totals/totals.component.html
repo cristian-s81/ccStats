@@ -5,7 +5,7 @@
         Gain/Loss:
         {{gainLoss}}{{currency}}</button>
     <span class="spacer-big"></span>
-    <button mat-button color="{{balance.actualValue - balance.starting > 0 ? 'green' : 'red'}}"
+    <button mat-button color="{{balance.actualValue - balance.starting_balance > 0 ? 'green' : 'red'}}"
         (click)="convertFiatCurrency()">Current Balance:
         {{actualValue}}{{currency}}</button>
 </div>
@@ -17,7 +17,7 @@
         Gain/Loss:
         {{gainLoss}}{{currency}}</button>
     <mat-divider></mat-divider>
-    <button mat-button color="{{balance.actualValue - balance.starting > 0 ? 'green' : 'red'}}"
+    <button mat-button color="{{balance.actualValue - balance.starting_balance > 0 ? 'green' : 'red'}}"
         (click)="convertFiatCurrency()">Current Balance:
         {{actualValue}}{{currency}}</button>
 </div>

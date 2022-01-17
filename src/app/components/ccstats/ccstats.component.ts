@@ -17,6 +17,8 @@ export class CcstatsComponent implements OnInit {
     let user = this.activatedRoute.snapshot.paramMap.get("user");
     if (user)
       this.user = user;
+
+    console.log("user " + user);
   }
 
   ngOnInit(): void {

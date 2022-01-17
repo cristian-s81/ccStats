@@ -7,5 +7,5 @@ import { Injectable } from '@angular/core';
 export class BalanceData {
     gainLoss!: number;
     actualValue!: number;
-    starting!: number;
+    starting_balance!: number;
 }
