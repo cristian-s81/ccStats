@@ -41,7 +41,7 @@ export class CurrencyDataService {
         ccModel.balance.gainLoss = ccModel.balance.gainLoss + ccList[0].buyPriceAverageGainLoss;
         ccModel.balance.actualValue = ccModel.balance.actualValue + Math.round(ccList[0].totalQty * ccList[0].current_price);
         ccModel.cryptos.push(ccList[0]);
-        ccModel.cryptos.sort((a, b) => b.buyPriceAverageGainLoss - a.buyPriceAverageGainLoss);
+        ccModel.cryptos.sort((a, b) => b.buyPriceAveragePerc - a.buyPriceAveragePerc);
       },
         error => console.log(error.status)
       );
