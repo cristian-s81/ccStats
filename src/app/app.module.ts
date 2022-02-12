@@ -14,6 +14,7 @@ import { MaterialModule } from './material.module'; // For Angular Material supp
 import { environment } from 'src/environments/environment';
 import { initializeApp } from 'firebase/app';
 import { Routes } from '@angular/router';
+import { SimulationDialogComponent } from './components/simulation-dialog/simulation-dialog.component';
 
 const routes: Routes = [
   { path: 'fede', component: CcstatsComponent },
@@ -27,7 +28,8 @@ const app = initializeApp(environment.firebaseConfig);
     CcstatsComponent,
     CcurrencyComponent,
     CcentryComponent,
-    TotalsComponent
+    TotalsComponent,
+    SimulationDialogComponent
   ],
   imports: [
     BrowserModule,

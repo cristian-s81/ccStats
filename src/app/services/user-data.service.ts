@@ -20,13 +20,13 @@ export class UserDataService {
     this.user = user;
 
 
-    const db = getFirestore();
+    // const db = getFirestore();
     // const querySnapshot = await getDocs(collection(db, "Wallets"));
     // querySnapshot.forEach((doc) => {
     //   console.log(`${doc.id} => ${doc.data()}`);
     // });
-    const owners = await collection(db, "users");
-    await setDoc(doc(owners, "" + user), { name: "Cristian", path: "cri" });
+    // const owners = await collection(db, "users");
+    // await setDoc(doc(owners, "" + user), { name: "Cristian", path: "cri" });
 
     // try {
     //   const docRef = await addDoc(collection(db, "users"), {

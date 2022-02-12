@@ -27,6 +27,7 @@ export class TotalsComponent implements OnInit {
       this.actualValue = this.balance.actualValue;
       this.gainLoss = this.balance.gainLoss;
       this.balance.starting_balance = Math.round(1 / this.usdtEuro * this.userDataservice.getStartingCapital());
+      this.convertFiatCurrency();
     },
       error => console.log(error.status)
     );

@@ -8,4 +8,5 @@ export class BalanceData {
     gainLoss!: number;
     actualValue!: number;
     starting_balance!: number;
+    loading: boolean = true;
 }

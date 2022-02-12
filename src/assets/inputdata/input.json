@@ -1,5 +1,5 @@
 {
-    "starting_balance": 1850,
+    "starting_balance": 1900,
     "currency": "EUR",
     "exchange": "Binance",
     "ccdata": [
@@ -138,6 +138,12 @@
                     "price": 1.000,
                     "date": "2021-12-03 15:00",
                     "staking": 2
+                },
+                {
+                    "qty": 59.51,
+                    "price": 0.46,
+                    "date": "2022-02-11 15:00",
+                    "staking": 2
                 }
             ]
         },
@@ -221,6 +227,12 @@
                     "qty": 8,
                     "price": 3.85311,
                     "date": "2021-10-11 14:30",
+                    "staking": 1
+                },
+                {
+                    "qty": 27.3,
+                    "price": 1.0,
+                    "date": "2022-02-12 14:30",
                     "staking": 1
                 }
             ]

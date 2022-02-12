@@ -1,24 +1,26 @@
-<div fxShow="true" fxHide.lt-md="true" fxFlexFill>
-    <button mat-button>Balance Overview</button>
-    <span class="spacer-small"></span>
-    <button mat-button color="{{balance.gainLoss > 0 ? 'green' : 'red'}}" (click)="convertFiatCurrency()">Entries
-        Gain/Loss:
-        {{gainLoss}}{{currency}}</button>
-    <span class="spacer-big"></span>
-    <button mat-button color="{{balance.actualValue - balance.starting_balance > 0 ? 'green' : 'red'}}"
-        (click)="convertFiatCurrency()">Current Balance:
-        {{actualValue}}{{currency}}</button>
+<div>
+    <div fxShow="true" fxHide.lt-md="true" fxFlexFill>
+        <button mat-button>Balance Overview</button>
+        <span class="spacer-small"></span>
+        <button mat-button color="{{balance.gainLoss > 0 ? 'green' : 'red'}}" (click)="convertFiatCurrency()">Entries
+            Gain/Loss:
+            {{gainLoss}}{{currency}}</button>
+        <span class="spacer-big"></span>
+        <button mat-button color="{{balance.actualValue - balance.starting_balance > 0 ? 'green' : 'red'}}"
+            (click)="convertFiatCurrency()">Current Balance:
+            {{actualValue}}{{currency}}</button>
+    </div>
+    <!-- <mat-sidenav-container fxFlexFill class="example-container"> -->
+    <div fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true" fxFlexFill>
+        <button mat-button>Balance Overview</button>
+        <mat-divider></mat-divider>
+        <button mat-button color="{{balance.gainLoss > 0 ? 'green' : 'red'}}" (click)="convertFiatCurrency()">Entries
+            Gain/Loss:
+            {{gainLoss}}{{currency}}</button>
+        <mat-divider></mat-divider>
+        <button mat-button color="{{balance.actualValue - balance.starting_balance > 0 ? 'green' : 'red'}}"
+            (click)="convertFiatCurrency()">Current Balance:
+            {{actualValue}}{{currency}}</button>
+    </div>
+    <!-- </mat-sidenav-container> -->
 </div>
-<!-- <mat-sidenav-container fxFlexFill class="example-container"> -->
-<div fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true" fxFlexFill>
-    <button mat-button>Balance Overview</button>
-    <mat-divider></mat-divider>
-    <button mat-button color="{{balance.gainLoss > 0 ? 'green' : 'red'}}" (click)="convertFiatCurrency()">Entries
-        Gain/Loss:
-        {{gainLoss}}{{currency}}</button>
-    <mat-divider></mat-divider>
-    <button mat-button color="{{balance.actualValue - balance.starting_balance > 0 ? 'green' : 'red'}}"
-        (click)="convertFiatCurrency()">Current Balance:
-        {{actualValue}}{{currency}}</button>
-</div>
-<!-- </mat-sidenav-container> -->

@@ -14,7 +14,6 @@ import { UserDataService } from './user-data.service';
 })
 export class CurrencyDataService {
 
-
   constructor(private http: HttpClient, private userDataService: UserDataService) { }
 
   getCurrencyData(fiat: String, ccId: String): Observable<CryptoCurrency[]> {
@@ -42,6 +41,7 @@ export class CurrencyDataService {
         ccModel.balance.actualValue = ccModel.balance.actualValue + Math.round(ccList[0].totalQty * ccList[0].current_price);
         ccModel.cryptos.push(ccList[0]);
         ccModel.cryptos.sort((a, b) => b.buyPriceAveragePerc - a.buyPriceAveragePerc);
+        ccModel.balance.loading = ccData.length > ccModel.cryptos.length;
       },
         error => console.log(error.status)
       );
